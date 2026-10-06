@@ -1,0 +1,102 @@
+{
+  "subject": "Thomas Prommer",
+  "as_of": "2026-10-06",
+  "press_page": "https://prommer.net/en/tech/press/",
+  "questions_omitted": true,
+  "questions_note": "Omitted by the applicant's decision on 2026-10-06: the supplied questions were unfilled placeholders.",
+  "questions": [],
+  "facts": [
+    {
+      "id": "angle-ctocraft-os",
+      "kind": "angle",
+      "title": "AI is the New OS",
+      "outlet": "CTO Craft",
+      "date": "2026-06-12",
+      "role": "Guest essay by Prommer",
+      "value": "Work is shifting from clicking through application interfaces to agents using command-line tools and MCP servers, so technology leaders should prioritise agent governance, agent-addressable systems and shorter vendor contracts.",
+      "source": "https://ctocraft.com/ai-is-the-new-os/",
+      "evidence": "The operating system, as we have known it for forty years, is being quietly replaced.",
+      "date_evidence": "article:published_time 2026-06-12T14:53:39+00:00"
+    },
+    {
+      "id": "angle-cio-state-2026",
+      "kind": "angle",
+      "title": "State of the CIO, 2026: CIOs set the course for AI ROI",
+      "outlet": "CIO.com",
+      "date": "2026-06-01",
+      "role": "Prommer quoted",
+      "value": "CIOs are moving past open-ended AI experimentation, building structures and KPIs that prioritize use cases with measurable business returns, according to the 2026 State of the CIO survey.",
+      "source": "https://www.cio.com/article/4178006/state-of-the-cio-2026-cios-set-the-course-for-ai-roi.html",
+      "evidence": "with checkpoints at 90, 180, and 270 days",
+      "date_evidence": "JSON-LD datePublished 2026-06-01T10:01:00Z"
+    },
+    {
+      "id": "angle-cioinc-playbook",
+      "kind": "angle",
+      "title": "Why Enterprises Need a New Playbook for AI Value",
+      "outlet": "CIO.inc (ISMG)",
+      "date": "2026-07-01",
+      "role": "Prommer quoted",
+      "value": "AI value is hard to prove because ROI measurement, adoption and accountability are failing, not the technology; the fix is outcome-based measures and shared ownership.",
+      "source": "https://www.cio.inc/blogs/enterprises-need-new-playbook-for-ai-value-p-4144",
+      "evidence": "The technology isn't failing. The measurement framework is.",
+      "date_evidence": "visible byline: Rahul Neel Mani, July 1, 2026"
+    },
+    {
+      "id": "angle-cio-incremental",
+      "kind": "angle",
+      "title": "Enterprises still chase incremental, not transformational, AI gains",
+      "outlet": "CIO.com",
+      "date": "2026-04-29",
+      "role": "Prommer quoted",
+      "value": "Most enterprises still settle for marginal AI productivity gains rather than transformational ones, the piece reports, because process redesign and governance are not yet in place.",
+      "source": "https://www.cio.com/article/4164622/enterprises-still-chase-incremental-not-transformational-ai-gains.html",
+      "evidence": "focusing instead on incremental productivity and efficiency gains",
+      "date_evidence": "JSON-LD datePublished 2026-04-29T09:30:00Z"
+    },
+    {
+      "id": "angle-bi-credit",
+      "kind": "angle",
+      "title": "Employees are doing the work. AI is getting the credit.",
+      "outlet": "Business Insider",
+      "date": "2026-07-13",
+      "role": "Prommer quoted",
+      "value": "Managers who assume AI drove the work are delaying promotions and trimming raises for the employees who did it, so credit should follow outcomes, not tools.",
+      "source": "https://www.businessinsider.com/bosses-credit-human-employees-ai-delaying-promotions-raises-2026-7",
+      "evidence": "crediting outcomes rather than tools",
+      "date_evidence": "JSON-LD datePublished 2026-07-13T08:08:01.250Z"
+    },
+    {
+      "id": "num-years",
+      "kind": "number",
+      "value": "20+",
+      "label": "years scaling engineering organisations at Fortune 500 companies",
+      "source": "https://prommer.net/en/tech/press/",
+      "evidence": "20+ years scaling engineering organisations at Fortune 500 companies"
+    },
+    {
+      "id": "num-adidas-engineers",
+      "kind": "number",
+      "value": "1000+",
+      "label": "engineers in his organisation as Global SVP Engineering at Adidas",
+      "source": "https://prommer.net/en/tech/press/",
+      "evidence": "Global SVP Engineering at Adidas (1000+ engineers"
+    },
+    {
+      "id": "num-adidas-ecommerce",
+      "kind": "number",
+      "value": "$9B+",
+      "label": "e-commerce operation across 50 markets, powered by that Adidas engineering function",
+      "source": "https://prommer.net/en/tech/press/",
+      "evidence": "$9B+ e-commerce across 50 markets"
+    },
+    {
+      "id": "num-huge-growth",
+      "kind": "number",
+      "value": "50 to 500+",
+      "label": "engineers as he grew the technology practice at Huge (IPG), across 14 global offices",
+      "source": "https://prommer.net/en/tech/press/",
+      "evidence": "grew the technology practice from 50 to 500+ engineers across 14 global offices"
+    }
+  ]
+}

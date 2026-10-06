@@ -1,0 +1,1 @@
+{"name":"booker-kit-verify","private":true,"type":"module","description":"Test-only browser harness. Not shipped with the page.","dependencies":{"playwright-core":"^1.63.0"}}

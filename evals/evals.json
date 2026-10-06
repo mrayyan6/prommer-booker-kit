@@ -1,0 +1,19 @@
+{
+  "skill_name": "prommer-booker-kit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a one-page complement to https://prommer.net/en/tech/press/ for podcast producers: five angles (title, outlet, date, link, one restating sentence), proof numbers with an as-of date and a source link each, a download-as-.md button. Link to the press page for bios, headshots and contact; do not copy them. Keep noindex and the unofficial footer. build.mjs reads facts.json and fails while any question marker remains. Check 390px. Deploy to GitHub Pages; the public URL must return 200.",
+      "expected_output": "A static index.html built from facts.json, deployed publicly, with five sourced angles, sourced proof numbers, a working .md download, noindex, the exact unofficial footer and no placeholder text.",
+      "files": [],
+      "expectations": [
+        "index.html shows exactly five angles, and each has a title, outlet, date, link and one restating sentence that matches a kind=angle entry in facts.json with the same source URL.",
+        "Every proof number on the page sits under an 'as of' date and has its own source link, and each value matches a kind=number entry in facts.json that has a source URL and an evidence snippet.",
+        "No unfilled placeholder ships: index.html contains no {{HUMAN marker and no <question N> text, and running node build.mjs against a copy of facts.json that contains a {{HUMAN: question 1}} marker exits non-zero without writing index.html.",
+        "index.html has a robots meta tag containing noindex, a visible footer with the exact text 'Concept built for an application. Not an official prommer.net page.', and links to https://prommer.net/en/tech/press/ for bios, headshots and the contact form without copying bio text or headshot images.",
+        "At a 390px viewport the page has no horizontal scroll, and the Download as .md button is reachable by keyboard and downloads a .md file containing the five angles and the proof numbers (see verify/check.mjs and its results file).",
+        "The public GitHub Pages URL returns HTTP 200 on a clean curl and serves the same index.html as the repo."
+      ]
+    }
+  ]
+}
