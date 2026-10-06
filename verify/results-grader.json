@@ -1,0 +1,19 @@
+{
+  "target": "https://mrayyan6.github.io/prommer-booker-kit/",
+  "status": 200,
+  "viewport": "390x844",
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "no_horizontal_scroll": true,
+  "download_button_reached_by_tab": true,
+  "download_filename": "prommer-booker-kit.md",
+  "download_bytes": 2516,
+  "download_contains": {
+    "angles": 5,
+    "proof_numbers": 4,
+    "questions_heading": false,
+    "footer": true
+  },
+  "requests": 1,
+  "third_party_requests": []
+}

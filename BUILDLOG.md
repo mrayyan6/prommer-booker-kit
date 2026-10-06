@@ -86,3 +86,19 @@ Decision: STOP, as brief step 3 requires, and ask the user how to proceed. Nothi
 ## 22:02 Deploy (v1)
 
 - git init on main, repo-local noreply identity, commit, tag v1, `gh repo create prommer-booker-kit --public --source . --push`, then GitHub Pages enabled from main at `/`. `.nojekyll` makes Pages serve files as they are.
+- Result: repo https://github.com/mrayyan6/prommer-booker-kit, Pages https://mrayyan6.github.io/prommer-booker-kit/. Pages build status went from `building` to `built` in about 60 s; polls returned 404 from 22:02:13 to 22:02:59, then `http=200` at 22:03:10. `curl -sS URL | cmp - index.html` printed no difference, so the served page is the repo's index.html.
+
+## 22:03 Verify (v1)
+
+- 6 expectations in the skill-creator evals.json format in `evals/evals.json`. The grader subagent follows `agents/grader.md` with BUILDLOG.md as the transcript and the repo as outputs_dir. It runs the marker guard, `verify/check.mjs` against the live URL, and curl.
+
+## 22:04 Grading result (v1)
+
+- grader.md verdict: 6 of 6 expectations passed (pass_rate 1.0). Saved as `evals/grading-v1.json`, with local user paths replaced by `~`.
+- Fix step: nothing failed, so there is no v2. Tag v1 is the shipped version.
+- The grader's critique of my evals, kept as open items:
+  - All four proof numbers cite his own press page. None is independently corroborated.
+  - No expectation checks the angle sentences against the articles. They rest on the fetch subagents' reading plus the evidence snippets in facts.json.
+  - The questions section is absent by the applicant's decision (recorded in facts.json and above), and no expectation covers that.
+  - The grader's marker test also tripped the question count check ("expected 3 questions, found 1"). My 22:01 test kept `questions_omitted: true` and failed on the marker alone.
+- Not done, per the cut-down brief: bios, comparator, analyzer, eval viewer, screenshots, a separate AUDIT.md (the audit evidence that exists is in this log).

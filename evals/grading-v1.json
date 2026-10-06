@@ -1,0 +1,24 @@
+{
+ "expectations":[
+ {"text":"index.html shows exactly five angles, each with title, outlet, date, link and one restating sentence matching a kind=angle fact with the same source URL.","passed":true,"evidence":"index.html has 5 li.angles items; titles, outlets, dates, hrefs and sentences match the 5 kind=angle entries in facts.json (ctocraft, cio.com x2, cio.inc, businessinsider). Each fact has an evidence snippet and date_evidence."},
+ {"text":"Every proof number sits under an 'as of' date with its own source link, matching a kind=number fact with source and evidence.","passed":true,"evidence":"'As of 6 Oct 2026' precedes 4 numbers (20+, 1000+, $9B+, 50 to 500+), each with its own Source link; values match the 4 kind=number facts, each with source URL and evidence snippet. Sources are all the same press page, which is the subject's own claims (weak independence)."},
+ {"text":"No unfilled placeholder ships; build.mjs exits non-zero on a {{HUMAN}} marker without writing index.html.","passed":true,"evidence":"grep for {{HUMAN, <question and <img in index.html: 0 matches. Marker-guard run: BUILD FAILED, 'unfilled question markers: {{HUMAN: question 1}}', exit=1, index.html hash unchanged."},
+ {"text":"robots noindex, exact footer text, link to press page, no copied bio text or headshots.","passed":true,"evidence":"meta robots 'noindex, nofollow'; footer text exactly 'Concept built for an application. Not an official prommer.net page.'; multiple links to https://prommer.net/en/tech/press/; no <img>; no bio paragraphs, only restated proof labels."},
+ {"text":"390px: no horizontal scroll; Download as .md reachable by keyboard and downloads .md with five angles and proof numbers.","passed":true,"evidence":"verify/results-grader.json against the live site: scrollWidth 390 = clientWidth 390, no_horizontal_scroll true, download_button_reached_by_tab true, file prommer-booker-kit.md 2516 bytes, 5 angles, 4 proof numbers, footer true, 0 third-party requests, exit 0."},
+ {"text":"Public GitHub Pages URL returns 200 and serves the same index.html as the repo.","passed":true,"evidence":"curl returned 200 on first try; curl body cmp against local index.html printed SAME."}
+ ],
+ "summary":{"passed":6,"failed":0,"total":6,"pass_rate":1.0},
+ "claims":[
+ {"claim":"Interview questions were omitted by the user's decision","type":"process","verified":false,"evidence":"BUILDLOG says the user answered 'Ship without questions' via AskUserQuestion, but that is not visible in the relayed request, where the user asked for three questions; page ships none. Cannot verify from available files."},
+ {"claim":"The request's deliverable included three interview questions","type":"quality","verified":false,"evidence":"Page and .md contain zero questions, so item 3 of the brief is unmet (the supplied questions were literal placeholders)."},
+ {"claim":"Zero-hop redirects on the press page","type":"factual","verified":true,"evidence":"Logged in BUILDLOG with commands; not re-run by the grader."}
+ ],
+ "user_notes_summary":{"uncertainties":["Redirect-loop hypothesis is unproven"],"needs_review":["Questions omitted; confirm the user really accepted this"],"workarounds":["Dropped Spiceworks (504); build guard still demands 3 questions yet facts.json has questions_omitted true"]},
+ "eval_feedback":{
+ "suggestions":[
+ {"assertion":"Marker guard","reason":"The guard output says 'expected 3 questions, found 1', so it exits non-zero for the wrong reason as well as the marker. Does the shipped facts.json (questions_omitted true) build? Add a test that a marker alone fails when questions_omitted is true."},
+ {"assertion":"Proof numbers","reason":"All four numbers cite the subject's own press page, so the check passes without independent corroboration; consider requiring one third-party source."},
+ {"reason":"No expectation checks that the three interview questions requested in the brief are present or that their omission is explicitly flagged to the user."},
+ {"reason":"Angle sentences are not checked against the fetched pieces; only consistency between page and facts.json is checked."}],
+ "overall":"All six pass, but assertions check consistency with facts.json rather than truth, and the missing interview questions are uncovered."}
+}
