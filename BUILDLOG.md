@@ -102,3 +102,7 @@ Decision: STOP, as brief step 3 requires, and ask the user how to proceed. Nothi
   - The questions section is absent by the applicant's decision (recorded in facts.json and above), and no expectation covers that.
   - The grader's marker test also tripped the question count check ("expected 3 questions, found 1"). My 22:01 test kept `questions_omitted: true` and failed on the marker alone.
 - Not done, per the cut-down brief: bios, comparator, analyzer, eval viewer, screenshots, a separate AUDIT.md (the audit evidence that exists is in this log).
+
+## 22:04 Privacy check
+
+- Wrong: my check for local user paths (`grep -i rayya`) matched the public login `mrayyan6` in BUILDLOG.md and verify/results-grader.json, a false positive. Worse, my command chain pushed before acting on the count. Fix: a narrower check (`grep -E '[Cc]:[\/]+Users|/c/Users|AppData'`) found 0 files with local paths. From now on, the push runs only after the check passes.
